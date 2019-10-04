@@ -1,5 +1,3 @@
-import java.io.BufferedWriter;
-
 public class CreditCardStrategy implements PaymentStrategy {
 
     private String name;

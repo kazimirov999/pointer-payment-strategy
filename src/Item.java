@@ -3,9 +3,27 @@ public class Item {
     private String upcCode;
     private int price;
 
-    public Item(String upcCode, int price) {
-        this.upcCode = upcCode;
-        this.price = price;
+    public static class Builder {
+
+        Item item;
+
+        public Builder() {
+            item = new Item();
+        }
+
+        public Builder withUpcCode(String upcCode) {
+            item.upcCode = upcCode;
+            return this;
+        }
+
+        public Builder withPrice(int price) {
+            item.price = price;
+            return this;
+        }
+
+        public Item build() {
+            return item;
+        }
     }
 
     public String getUpcCode() {
